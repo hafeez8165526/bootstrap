@@ -21,6 +21,16 @@
         #heading {
             color: white;
         }
+
+        
+        .btn-primary::after {
+            background-color: green;
+            border-radius: 0%;
+        }
+
+        .gj-datepicker-bootstrap [role=right-icon] button {
+            position: absolute;
+        }
     </style>
 </head>
 
@@ -83,36 +93,42 @@
             </div>
             <div class="col-lg-3">
                 <label> Department</label>
-                <input type="text" class="form-control">
+                <select class="form-control">
+                    <option>hbsdf</option>
+                    <option>hbsdf</option>
+                    <option>hbsdf</option>
+                    <option>hbsdf</option>
+
+                </select>
             </div>
             <div class="col-lg-3">
                 <label> Date of birth</label>
-                <input type="text" class="form-control" id="dateOfBirth">
+                <input type="text" size="16" class="form-control" id="dateOfBirth">
             </div>
             <div class="col-lg-3">
                 <label> Gender</label>
                 <br>
                 <input type="radio" name="sex" value="male">Male
-                <input type="radio" name="sex"  value="female">Female
+                <input type="radio" name="sex" value="female">Female
             </div>
             <div class="col-lg-3">
                 <label> Permanent</label>
                 <br>
-                <input type="checkbox"  value="yes">
-              
+                <input type="checkbox" value="yes">
+
             </div>
 
-            
+
         </div>
         <div class="row">
             <div class="col-lg-6">
-                <input type="submit" class="btn-success">
-              
+                <input type="submit" class="btn btn-primary" id="hai">
+
             </div>
         </div>
     </div>
 
-    
+
 
 
 
@@ -133,6 +149,11 @@
             format: 'dd/mm/yyyy'
 
         });
+        $(document).ready(function(){
+        $("#hai").click(function(){
+       $("#hai").addClass("btn-success");
+    });
+});
 
     </script>
 
